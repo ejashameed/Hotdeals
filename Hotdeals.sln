@@ -1,14 +1,37 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{91358821-BB10-4838-811C-B45759FE2266}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D69A08DE-301A-4AB8-AABD-4B0DA254D11B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "application", "application", "{A6DB63DF-6572-4017-B19C-BD3B9D2FCEF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{0182FCD7-DEB2-4E61-A005-AA6A96B38E23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{91D412AD-1050-4E28-9B53-DCBAA3EF9733}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{7FC5303C-3CAA-49FE-BDE3-3BCE5E7C4CBF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unitTest", "unitTest", "{C2AFC642-6367-414F-A134-CDF3F40A84C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "integrationTest", "integrationTest", "{0F130BD3-4206-4C37-888C-1747F5C17282}"
+EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A6DB63DF-6572-4017-B19C-BD3B9D2FCEF4} = {91358821-BB10-4838-811C-B45759FE2266}
+		{0182FCD7-DEB2-4E61-A005-AA6A96B38E23} = {91358821-BB10-4838-811C-B45759FE2266}
+		{91D412AD-1050-4E28-9B53-DCBAA3EF9733} = {91358821-BB10-4838-811C-B45759FE2266}
+		{7FC5303C-3CAA-49FE-BDE3-3BCE5E7C4CBF} = {91358821-BB10-4838-811C-B45759FE2266}
+		{C2AFC642-6367-414F-A134-CDF3F40A84C6} = {D69A08DE-301A-4AB8-AABD-4B0DA254D11B}
+		{0F130BD3-4206-4C37-888C-1747F5C17282} = {D69A08DE-301A-4AB8-AABD-4B0DA254D11B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76508C24-23F7-4FF4-AE1E-EEED3B065347}
 	EndGlobalSection
 EndGlobal
