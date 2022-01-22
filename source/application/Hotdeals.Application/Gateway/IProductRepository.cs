@@ -9,11 +9,11 @@ namespace Hotdeals.Application.Gateway
 {
     public interface IProductRepository
     {
-        Task<IEnumerable<Product>> GetAllAsync();
-        Task<Product> GetByIdAsync(Guid Id);
-        Task<Product> AddAsync(Product product);
-        Task<Product> UpdateAsync(Product product);
-        Task<Product> RemoveAsync(Guid Id);
+        Task<IEnumerable<Products>> GetAllAsync();
+        Task<Products> GetByIdAsync(string Id);
+        Task<Products> AddAsync(Products product);
+        Task<Products> UpdateAsync(Products product);
+        Task<Products> RemoveAsync(string Id);
     }
 
 }

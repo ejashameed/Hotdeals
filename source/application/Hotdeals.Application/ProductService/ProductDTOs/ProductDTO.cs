@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotdeals.Domain.ECommerceDomain.Entities
+namespace Hotdeals.Application.ProductService.ProductDTOs
 {
-
-
-    public class Product
+    public class ProductDTO
     {
-        public Guid ProductId { get; set; }
+        public string ProductId { get; set; }
         public string ProductName { get; set; }
-    }0
+    }
 }

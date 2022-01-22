@@ -1,5 +1,5 @@
 ﻿using Hotdeals.Application.Gateway;
-using Hotdeals.Application.Products.ProductDTOs;
+using Hotdeals.Application.ProductService.ProductDTOs;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Hotdeals.Application.Products.DeleteProduct
+namespace Hotdeals.Application.ProductService.DeleteProduct
 {
     public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand, ProductDTO>
     {

@@ -1,4 +1,5 @@
 using Hotdeals.Application;
+using Hotdeals.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -34,6 +35,8 @@ namespace Hotdeals.API
 
             // to register the services in DI container which are declared in Application project
             services.AddApplication();
+            // to register infrastructure repository services
+            services.AddRepository();
 
         }
 

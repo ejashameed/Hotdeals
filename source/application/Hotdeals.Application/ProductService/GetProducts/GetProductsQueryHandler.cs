@@ -1,5 +1,5 @@
 ﻿using Hotdeals.Application.Gateway;
-using Hotdeals.Application.Products.ProductDTOs;
+using Hotdeals.Application.ProductService.ProductDTOs;
 using Hotdeals.Domain.ECommerceDomain.Entities;
 using MediatR;
 using System;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Hotdeals.Application.Products.GetProducts
+namespace Hotdeals.Application.ProductService.GetProducts
 {
     public class GetProductsQueryHandler: IRequestHandler<GetProductsQuery, IEnumerable<ProductDTO>>
     {
@@ -20,8 +20,8 @@ namespace Hotdeals.Application.Products.GetProducts
         }
         public async Task<IEnumerable<ProductDTO>> Handle(GetProductsQuery request, CancellationToken cancellationToken)
         {
-            IEnumerable<Product> products = await _productRepository.GetAllAsync();
-            var productsDTOs = products.Select(x => new ProductDTO { ProductId = x.ProductId, ProductName = x.ProductName, };
+            IEnumerable<Products> products = await _productRepository.GetAllAsync();
+            var productsDTOs = products.Select(x => new ProductDTO { ProductId = x.ProductId, ProductName = x.ProductName, });
             return productsDTOs;            
         }
     }

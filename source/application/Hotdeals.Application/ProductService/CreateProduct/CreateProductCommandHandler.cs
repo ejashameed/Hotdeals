@@ -1,5 +1,5 @@
 ﻿using Hotdeals.Application.Gateway;
-using Hotdeals.Application.Products.ProductDTOs;
+using Hotdeals.Application.ProductService.ProductDTOs;
 using Hotdeals.Domain.ECommerceDomain.Entities;
 using MediatR;
 using System;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Hotdeals.Application.Products.CreateProduct
+namespace Hotdeals.Application.ProductService.CreateProduct
 {
     public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, ProductDTO>
     {
@@ -21,9 +21,9 @@ namespace Hotdeals.Application.Products.CreateProduct
 
         public async Task<ProductDTO> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
-            var product = new Product
+            var product = new Products
             {
-                ProductId = Guid.NewGuid(),
+                ProductId = Guid.NewGuid().ToString(),
                 ProductName = request.ProductName,
             };
 

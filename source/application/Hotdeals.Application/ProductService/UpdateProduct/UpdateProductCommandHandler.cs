@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MediatR;
-using Hotdeals.Application.Products.ProductDTOs;
 using System.Threading;
 using Hotdeals.Application.Gateway;
+using Hotdeals.Application.ProductService.ProductDTOs;
 
-namespace Hotdeals.Application.Products.UpdateProduct
+namespace Hotdeals.Application.ProductService.UpdateProduct
 {
     public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, ProductDTO>
     {

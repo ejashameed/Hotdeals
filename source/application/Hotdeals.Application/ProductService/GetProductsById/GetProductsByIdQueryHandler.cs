@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Hotdeals.Application.Gateway;
-using Hotdeals.Application.Products.ProductDTOs;
+using Hotdeals.Application.ProductService.ProductDTOs;
 using MediatR;
 
-namespace Hotdeals.Application.Products.GetProductsById
+namespace Hotdeals.Application.ProductService.GetProductsById
 {
     public class GetProductsByIdQueryHandler : IRequestHandler<GetProductsByIdQuery, ProductDTO>
     {
