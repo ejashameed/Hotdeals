@@ -29,7 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotdeals.Repository", "sour
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbScripts", "DbScripts", "{5AF44EEC-4807-4F34-9060-1402A50DCC04}"
 	ProjectSection(SolutionItems) = preProject
-		SqlQuery_1.sql = SqlQuery_1.sql
+		DBContext_Scaffold.sql = DBContext_Scaffold.sql
+		SQLTable_Creation.sql = SQLTable_Creation.sql
 	EndProjectSection
 EndProject
 Global
