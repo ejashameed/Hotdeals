@@ -24,7 +24,6 @@ namespace Hotdeals.Domain.ECommerceDomain.Entities
         public decimal? OrderItemGrossAmount { get; set; }
         public string OrderItemDeliveryStatus { get; set; }
 
-        public virtual Order OrderItemNavigation { get; set; }
         public virtual ICollection<Delivery> Deliveries { get; set; }
     }
 }

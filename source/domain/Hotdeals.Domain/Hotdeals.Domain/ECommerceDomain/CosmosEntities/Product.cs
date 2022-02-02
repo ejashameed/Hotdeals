@@ -4,14 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotdeals.Application.GetProductById
+namespace Hotdeals.Domain.ECommerceDomain.CosmosEntities
 {
-    public class GetProductByIdResponse
+
+    public class Product
     {
+        
+        
         public long Id { get; set; }
         public string Name { get; set; }
-        public string? Description { get; set; }
+        public string Description { get; set; }
         public decimal Price { get; set; }
-        public string? IsActive { get; set; }
+        public string CategoryId { get; set; }
+        public string IsActive { get; set; }
+        
+
     }
 }

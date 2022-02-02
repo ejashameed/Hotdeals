@@ -36,8 +36,7 @@ namespace Hotdeals.API
             // to register the services in DI container which are declared in Application project
             services.AddApplication();
             // to register infrastructure repository services
-            services.AddRepository();
-
+            services.AddRepository();                        
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

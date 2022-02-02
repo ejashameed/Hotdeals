@@ -7,24 +7,36 @@ using MediatR;
 using System.Threading;
 using Hotdeals.Application.Gateway;
 using Hotdeals.Application.ProductService.ProductDTOs;
+using AutoMapper;
+using Hotdeals.Domain.ECommerceDomain.Entities;
 
 namespace Hotdeals.Application.ProductService.UpdateProduct
 {
     public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, ProductDTO>
     {
         private readonly IProductRepository _productRepository;
-        public UpdateProductCommandHandler(IProductRepository productRepository)
+        private readonly IMapper _mapper;
+        public UpdateProductCommandHandler(IProductRepository productRepository, IMapper mapper)
         {
             _productRepository = productRepository;
-        }
+            _mapper = mapper;
+         }
+
         public async Task<ProductDTO> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
         {
-            var product = await _productRepository.GetByIdAsync(request.ProductId);
-            product.ProductName = request.ProductName;
+            if(request == null)
+                throw new ArgumentNullException(nameof(request),"Input Request is empty");
 
+            //map dto product to domain entity
+            var product = _mapper.Map<Product>(request);
+
+            // update entity in database
             var updatedProduct = await _productRepository.UpdateAsync(product);
 
-            return new ProductDTO { ProductId = updatedProduct.ProductId, ProductName = updatedProduct.ProductName };
+            // map result to DTO
+            var response =  _mapper.Map<ProductDTO>(updatedProduct);
+
+            return response;
 
         }
     }

@@ -20,8 +20,8 @@ namespace Hotdeals.Application.ProductService.DeleteProduct
         }
         public async Task<ProductDTO> Handle(DeleteProductCommand request, CancellationToken cancellationToken)
         {
-            var deletedProduct = await _productRepository.RemoveAsync(request.ProductId);
-            var productDTO = new ProductDTO { ProductId = deletedProduct.ProductId, ProductName = deletedProduct.ProductName };
+            var deletedProduct = await _productRepository.RemoveAsync(request.Id);
+            var productDTO = new ProductDTO { Id = deletedProduct.Id, Name = deletedProduct.Name };
 
             return productDTO;
         }

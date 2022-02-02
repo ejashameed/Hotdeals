@@ -10,7 +10,6 @@ namespace Hotdeals.Domain.ECommerceDomain.Entities
         public Order()
         {
             Deliveries = new HashSet<Delivery>();
-            OrderItems = new HashSet<OrderItem>();
         }
 
         public long Id { get; set; }
@@ -22,6 +21,5 @@ namespace Hotdeals.Domain.ECommerceDomain.Entities
         public string OrderStatus { get; set; }
 
         public virtual ICollection<Delivery> Deliveries { get; set; }
-        public virtual ICollection<OrderItem> OrderItems { get; set; }
     }
 }

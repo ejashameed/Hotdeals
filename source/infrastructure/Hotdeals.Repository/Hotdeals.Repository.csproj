@@ -4,6 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="..\..\..\..\..\ECommerce\source\infrastructure\Hotdeals.Repository\SQLRepostories\HotdealsCommerceContext.cs" Link="SQLRepostories\HotdealsCommerceContext.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.13">
@@ -19,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\application\Hotdeals.Application\Hotdeals.Application.csproj" />
+    <ProjectReference Include="..\..\domain\Hotdeals.Domain\Hotdeals.Domain\Hotdeals.Domain.csproj" />
   </ItemGroup>
 
 </Project>

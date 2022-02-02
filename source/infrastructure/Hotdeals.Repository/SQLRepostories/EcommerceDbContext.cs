@@ -17,7 +17,7 @@ namespace Hotdeals.Repository.SQLRepostories
             base.OnConfiguring(optionsBuilder);
         }
 
-        public DbSet<Products> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -6,11 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotdeals.Application.ProductService.GetProductsById
+namespace Hotdeals.Application.ProductService.GetProductByCategory
 {
-    public class GetProductsByIdQuery: IRequest<ProductDTO>
+    public class GetProductByCategoryQuery: IRequest<IEnumerable<ProductDTO>>
     {
-        public long Id { get; set; }
+        public  long Id { get; set; }
     }
 }
-    

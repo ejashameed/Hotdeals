@@ -1,19 +1,21 @@
-﻿using Hotdeals.Domain.ECommerceDomain.Entities;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Hotdeals.Domain.ECommerceDomain.Entities;
 
 namespace Hotdeals.Application.Gateway
 {
     public interface IProductRepository
     {
-        Task<IEnumerable<Products>> GetAllAsync();
-        Task<Products> GetByIdAsync(string Id);
-        Task<Products> AddAsync(Products product);
-        Task<Products> UpdateAsync(Products product);
-        Task<Products> RemoveAsync(string Id);
+        Task<IEnumerable<Product>> GetAllAsync();
+        Task<Product> GetByIdAsync(long Id);
+        Task<IEnumerable<Product>> GetByCategory(long Id);
+        Task<Product> AddAsync(Product product);
+        Task<Product> UpdateAsync(Product product);
+        Task<Product> RemoveAsync(long Id);
     }
 
 }

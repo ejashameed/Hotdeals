@@ -9,6 +9,6 @@ namespace Hotdeals.Application.GetProductById
 {
     public class GetProductByIdRequest: IRequest<GetProductByIdResponse>
     {
-        public string ProductId { get; set;}
+        public long Id { get; set;}
     }
 }

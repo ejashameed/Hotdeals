@@ -13,7 +13,7 @@ namespace Hotdeals.Repository
     {
         public static IServiceCollection AddRepository(this IServiceCollection services)
         {
-            services.AddScoped<EcommerceDbContext>();
+            services.AddScoped<HotdealsCommerceContext>();
             services.AddScoped<IProductRepository, ProductRepository>();
             return services;
         }

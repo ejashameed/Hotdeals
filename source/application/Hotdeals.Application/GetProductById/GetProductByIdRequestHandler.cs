@@ -14,9 +14,12 @@ namespace Hotdeals.Application.GetProductById
         {
             var product = new GetProductByIdResponse
             {
-                ProductId = request.ProductId,
-                ProductName = "Dell Inspiron Laptop 5540"
-            };
+                Id = request.Id,
+                Name = "Dell Inspiron Laptop 5540",
+                Description = "Dell laptop - 16GB RAM, 512 SSD, I 7- 10H2OU",
+                Price= 4865,
+                IsActive = "Y"               
+    };
 
             return product;
         }

@@ -10,8 +10,7 @@ namespace Hotdeals.Application.ProductService.DeleteProduct
 {
     public class DeleteProductCommand : IRequest<ProductDTO>
     {
-        public string ProductId { get; set; }
+        public long Id { get; set; }
         
-
     }
 }
